@@ -25,12 +25,15 @@
     "@electron-toolkit/utils": "^3.0.0",
     "@mdxeditor/editor": "^2.7.0",
     "@tailwindcss/typography": "^0.5.10",
-    "jotai": "^2.6.4"
+    "fs-extra": "^11.2.0",
+    "jotai": "^2.6.4",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config-prettier": "^2.0.0",
     "@electron-toolkit/eslint-config-ts": "^1.0.1",
     "@electron-toolkit/tsconfig": "^1.0.1",
+    "@types/lodash": "^4.14.202",
     "@types/node": "^18.19.9",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
