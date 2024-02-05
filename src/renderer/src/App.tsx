@@ -1,5 +1,5 @@
 import { useRef } from "react"
-import { ActionButtonsRow, Content, DraggableTopBar, FloatingNoteTitle, MarkdownEditor, NotePreviewList, RootLayout, Sidebar } from "./components"
+import { ActionButtonsRow, Content, FloatingNoteTitle, MarkdownEditor, NotePreviewList, RootLayout, Sidebar } from "./components"
 
 const App = () => {
   const contentContainerRef = useRef<HTMLDivElement>(null)
@@ -9,19 +9,16 @@ const App = () => {
   }
 
   return (
-    <>
-      <DraggableTopBar />
-      <RootLayout>
-        <Sidebar className="p-2 bg-cyan-800/40">
-          <ActionButtonsRow className="flex justify-between mt-1" />
-          <NotePreviewList className="mt-3 space-y-1" onSelect={resetScroll} />
-        </Sidebar>
-        <Content ref={contentContainerRef} className="border-l bg-zinc-900/50 border-l-white/20">
-          <FloatingNoteTitle className="pt-2" />
-          <MarkdownEditor />
-        </Content>
-      </RootLayout>
-    </>
+    <RootLayout>
+      <Sidebar className="p-2 bg-blue-600/40">
+        <ActionButtonsRow className="flex justify-between mt-1" />
+        <NotePreviewList className="mt-3 space-y-1" onSelect={resetScroll} />
+      </Sidebar>
+      <Content ref={contentContainerRef} className="border-l bg-zinc-200 border-l-white/20">
+        <FloatingNoteTitle className="pt-2" />
+        <MarkdownEditor />
+      </Content>
+    </RootLayout>
   )
 }
 
